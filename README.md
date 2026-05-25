@@ -21,6 +21,8 @@ El objetivo es cuantificar impacto en latencia, volumen de tráfico, estabilidad
 
 ## Arquitectura del laboratorio
 
+<img width="521" height="786" alt="ESQUEMA_PQC_definitivo" src="https://github.com/user-attachments/assets/ce8747e2-ba88-4ace-90bd-4c21ccdc3ea4" />
+
 Topología dockerizada cliente-monitor-servidor:
 
 - **Clientes (`pqc_client*`)** en `client_net` (`172.20.0.0/24`).
