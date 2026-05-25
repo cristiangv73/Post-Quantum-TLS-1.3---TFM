@@ -1,0 +1,136 @@
+services:
+  client:
+    build: ./client
+    container_name: pqc_client
+    hostname: client
+    networks:
+      client_net:
+        ipv4_address: 172.20.0.10
+    volumes:
+      - ./certs:/certs
+      - ./configs:/configs
+      - ./results:/results
+    cap_add:
+      - NET_ADMIN
+    tty: true
+
+  pqc_client_2:
+    build: ./client
+    container_name: pqc_client_2
+    hostname: client2
+    networks:
+      client_net:
+        ipv4_address: 172.20.0.11
+    volumes:
+      - ./certs:/certs
+      - ./configs:/configs
+      - ./results:/results
+    cap_add:
+      - NET_ADMIN
+    tty: true
+
+  pqc_client_3:
+    build: ./client
+    container_name: pqc_client_3
+    hostname: client3
+    networks:
+      client_net:
+        ipv4_address: 172.20.0.12
+    volumes:
+      - ./certs:/certs
+      - ./configs:/configs
+      - ./results:/results
+    cap_add:
+      - NET_ADMIN
+    tty: true
+
+  pqc_client_4:
+    build: ./client
+    container_name: pqc_client_4
+    hostname: client4
+    networks:
+      client_net:
+        ipv4_address: 172.20.0.13
+    volumes:
+      - ./certs:/certs
+      - ./configs:/configs
+      - ./results:/results
+    cap_add:
+      - NET_ADMIN
+    tty: true
+
+  pqc_client_5:
+    build: ./client
+    container_name: pqc_client_5
+    hostname: client5
+    networks:
+      client_net:
+        ipv4_address: 172.20.0.14
+    volumes:
+      - ./certs:/certs
+      - ./configs:/configs
+      - ./results:/results
+    cap_add:
+      - NET_ADMIN
+    tty: true
+
+  pqc_client_6:
+    build: ./client
+    container_name: pqc_client_6
+    hostname: client6
+    networks:
+      client_net:
+        ipv4_address: 172.20.0.15
+    volumes:
+      - ./certs:/certs
+      - ./configs:/configs
+      - ./results:/results
+    cap_add:
+      - NET_ADMIN
+    tty: true
+
+  server:
+    build: ./server
+    container_name: pqc_server
+    hostname: server
+    networks:
+      server_net:
+        ipv4_address: 192.168.0.10
+    volumes:
+      - ./certs:/certs
+      - ./configs:/configs
+      - ./results:/results
+    cap_add:
+      - NET_ADMIN
+    tty: true
+
+  monitor:
+    build: ./monitor
+    container_name: pqc_monitor
+    hostname: monitor
+    networks:
+      client_net:
+        ipv4_address: 172.20.0.2
+      server_net:
+        ipv4_address: 192.168.0.2
+    volumes:
+      - ./pcaps:/pcaps
+      - ./results:/results
+      - ./configs:/configs
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    tty: true
+
+networks:
+  client_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
+
+  server_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.0.0/24
