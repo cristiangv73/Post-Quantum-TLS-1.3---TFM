@@ -128,6 +128,11 @@ Los resultados se presentan desglosados en tres dimensiones:
 
 Las métricas analizadas permiten estudiar el impacto del modo híbrido desde una perspectiva multicapa: volumen transmitido, paquetización, latencia TLS, throughput, consumo de CPU y comportamiento TCP.
 
+Se adjunta Pipeline del laboratorio:
+
+<img width="1536" height="1024" alt="ChatGPT - Pipeline_v3" src="https://github.com/user-attachments/assets/0deaa513-726d-4b47-9263-80be4baf4857" />
+
+
 ## Alcance
 
 Proyecto orientado a investigación aplicada y validación experimental, no a despliegues de producción.
