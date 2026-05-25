@@ -1,0 +1,124 @@
+[2026-05-16 23:48:13] CLIENTS=pqc_client,pqc_client_2,pqc_client_3,pqc_client_4,pqc_client_5,pqc_client_6
+[2026-05-16 23:48:13] RUNS_PER_SCENARIO=5 TOTAL_CONN_VALUES=60 300 1002 STATS_INTERVAL=0.2
+[2026-05-16 23:48:13] ==== Iniciando bloque TOTAL_CONN=60 ====
+[2026-05-16 23:48:13] ---- Aplicando perfil de red P0 ----
+[*] Aplicando perfil P0
+[*] Perfil P0 (sin degradación)
+
+[*] Estado qdisc en monitor:
+qdisc noqueue 0: root refcnt 2 
+qdisc noqueue 0: root refcnt 2 
+[2026-05-16 23:48:14] === RUN START: hybrid_p0_balanced_c60_001 ===
+[2026-05-16 23:48:14] [*] Arrancando captura en pqc_monitor (eth0) para hybrid_p0_balanced_c60_001
+[*] Guardando muestras en: results/hybrid_p0_balanced_c60_001_docker_stats.csv
+[*] Ejecutando comando medido: bash -lc ./scripts/run_client_once_rafaga_hibrido.sh hybrid_p0_balanced_c60_001 60; sleep 3
+[*] Ráfaga híbrida completada: 60 conexiones en 6 clientes (poisson_jitter)
+=== host results ===
+-rw-rw-r-- 1 cristian cristian   13500 may 16 23:48 hybrid_p0_balanced_c60_001_client_err.txt
+-rw-rw-r-- 1 cristian cristian    1181 may 16 23:48 hybrid_p0_balanced_c60_001_client.txt
+-rw-rw-r-- 1 cristian cristian      69 may 16 23:48 hybrid_p0_balanced_c60_001_docker_stats.csv
+-rw-r--r-- 1 root     root        2250 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_2_client_err.txt
+-rw-r--r-- 1 root     root       42500 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_2_client.txt
+-rw-r--r-- 1 root     root          41 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_2_summary.txt
+-rw-r--r-- 1 root     root        2250 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_3_client_err.txt
+-rw-r--r-- 1 root     root       29196 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_3_client.txt
+-rw-r--r-- 1 root     root          41 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_3_summary.txt
+-rw-r--r-- 1 root     root        2250 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_4_client_err.txt
+-rw-r--r-- 1 root     root       35848 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_4_client.txt
+-rw-r--r-- 1 root     root          41 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_4_summary.txt
+-rw-r--r-- 1 root     root        2250 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_5_client_err.txt
+-rw-r--r-- 1 root     root       29196 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_5_client.txt
+-rw-r--r-- 1 root     root          41 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_5_summary.txt
+-rw-r--r-- 1 root     root        2250 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_6_client_err.txt
+-rw-r--r-- 1 root     root       32522 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_6_client.txt
+-rw-r--r-- 1 root     root          41 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_6_summary.txt
+-rw-r--r-- 1 root     root        2250 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_client_err.txt
+-rw-r--r-- 1 root     root       42500 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_client.txt
+-rw-r--r-- 1 root     root          39 may 16 23:48 hybrid_p0_balanced_c60_001_pqc_client_summary.txt
+=== resumen por cliente ===
+[*] Perfil poisson_jitter: llegadas no sincronizadas con Poisson+jitter
+[*] pqc_client <= plan: 1:0.114290 7:0.114290 13:0.114290 19:0.114290 25:0.114290 31:0.114290 37:0.114290 43:0.114290 49:0.114290 55:0.114290
+[*] pqc_client_2 <= plan: 2:0.114290 8:0.114290 14:0.114290 20:0.114290 26:0.114290 32:0.114290 38:0.114290 44:0.114290 50:0.114290 56:0.114290
+[*] pqc_client_3 <= plan: 3:0.114290 9:0.114290 15:0.114290 21:0.114290 27:0.114290 33:0.114290 39:0.114290 45:0.114290 51:0.114290 57:0.114290
+[*] pqc_client_4 <= plan: 4:0.114290 10:0.114290 16:0.114290 22:0.114290 28:0.114290 34:0.114290 40:0.114290 46:0.114290 52:0.114290 58:0.114290
+[*] pqc_client_5 <= plan: 5:0.114290 11:0.114290 17:0.114290 23:0.114290 29:0.114290 35:0.114290 41:0.114290 47:0.114290 53:0.114290 59:0.114290
+[*] pqc_client_6 <= plan: 6:0.114290 12:0.114290 18:0.114290 24:0.114290 30:0.114290 36:0.114290 42:0.114290 48:0.114290 54:0.114290 60:0.114290
+client=pqc_client total=10 ok=10 err=0
+client=pqc_client_2 total=10 ok=10 err=0
+client=pqc_client_3 total=10 ok=10 err=0
+client=pqc_client_4 total=10 ok=10 err=0
+client=pqc_client_5 total=10 ok=10 err=0
+client=pqc_client_6 total=10 ok=10 err=0
+[*] Resumen guardado en: results/hybrid_p0_balanced_c60_001_resource_summary.txt
+RUN_ID: hybrid_p0_balanced_c60_001
+CSV: results/hybrid_p0_balanced_c60_001_docker_stats.csv
+
+=== Resumen CPU% y MEM% (avg / max) por contenedor ===
+pqc_client_2 -> CPU avg=1.45%, CPU max=4.34%, MEM avg=0.09%, MEM max=0.09%
+pqc_client_3 -> CPU avg=2.70%, CPU max=8.09%, MEM avg=0.09%, MEM max=0.09%
+pqc_monitor -> CPU avg=0.40%, CPU max=0.92%, MEM avg=0.12%, MEM max=0.12%
+pqc_client_4 -> CPU avg=9.34%, CPU max=28.01%, MEM avg=0.16%, MEM max=0.32%
+pqc_client_5 -> CPU avg=3.40%, CPU max=10.20%, MEM avg=0.08%, MEM max=0.08%
+pqc_server -> CPU avg=5.14%, CPU max=15.42%, MEM avg=0.11%, MEM max=0.11%
+pqc_client_6 -> CPU avg=5.22%, CPU max=15.65%, MEM avg=0.13%, MEM max=0.13%
+pqc_client -> CPU avg=1.13%, CPU max=3.38%, MEM avg=0.11%, MEM max=0.11%
+[2026-05-16 23:48:28] [*] Parando captura en pqc_monitor para hybrid_p0_balanced_c60_001
+[*] Métricas TXT guardadas en results/hybrid_p0_balanced_c60_001_metrics.txt
+[*] Métricas CSV guardadas en results/hybrid_p0_balanced_c60_001_metrics.csv
+[2026-05-16 23:48:47] === RUN END: hybrid_p0_balanced_c60_001 ===
+
+[2026-05-16 23:48:47] === RUN START: hybrid_p0_balanced_c60_002 ===
+[2026-05-16 23:48:47] [*] Arrancando captura en pqc_monitor (eth0) para hybrid_p0_balanced_c60_002
+[*] Guardando muestras en: results/hybrid_p0_balanced_c60_002_docker_stats.csv
+[*] Ejecutando comando medido: bash -lc ./scripts/run_client_once_rafaga_hibrido.sh hybrid_p0_balanced_c60_002 60; sleep 3
+[*] Ráfaga híbrida completada: 60 conexiones en 6 clientes (poisson_jitter)
+=== host results ===
+-rw-rw-r-- 1 cristian cristian   13500 may 16 23:48 hybrid_p0_balanced_c60_002_client_err.txt
+-rw-rw-r-- 1 cristian cristian    1181 may 16 23:48 hybrid_p0_balanced_c60_002_client.txt
+-rw-rw-r-- 1 cristian cristian      69 may 16 23:48 hybrid_p0_balanced_c60_002_docker_stats.csv
+-rw-r--r-- 1 root     root        2250 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_2_client_err.txt
+-rw-r--r-- 1 root     root       42500 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_2_client.txt
+-rw-r--r-- 1 root     root          41 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_2_summary.txt
+-rw-r--r-- 1 root     root        2250 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_3_client_err.txt
+-rw-r--r-- 1 root     root       29196 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_3_client.txt
+-rw-r--r-- 1 root     root          41 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_3_summary.txt
+-rw-r--r-- 1 root     root        2250 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_4_client_err.txt
+-rw-r--r-- 1 root     root       25870 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_4_client.txt
+-rw-r--r-- 1 root     root          41 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_4_summary.txt
+-rw-r--r-- 1 root     root        2250 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_5_client_err.txt
+-rw-r--r-- 1 root     root       27533 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_5_client.txt
+-rw-r--r-- 1 root     root          41 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_5_summary.txt
+-rw-r--r-- 1 root     root        2250 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_6_client_err.txt
+-rw-r--r-- 1 root     root       29196 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_6_client.txt
+-rw-r--r-- 1 root     root          41 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_6_summary.txt
+-rw-r--r-- 1 root     root        2250 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_client_err.txt
+-rw-r--r-- 1 root     root       39174 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_client.txt
+-rw-r--r-- 1 root     root          39 may 16 23:48 hybrid_p0_balanced_c60_002_pqc_client_summary.txt
+=== resumen por cliente ===
+[*] Perfil poisson_jitter: llegadas no sincronizadas con Poisson+jitter
+[*] pqc_client <= plan: 1:0.004697 7:0.004697 13:0.004697 19:0.004697 25:0.004697 31:0.004697 37:0.004697 43:0.004697 49:0.004697 55:0.004697
+[*] pqc_client_2 <= plan: 2:0.004697 8:0.004697 14:0.004697 20:0.004697 26:0.004697 32:0.004697 38:0.004697 44:0.004697 50:0.004697 56:0.004697
+[*] pqc_client_3 <= plan: 3:0.004697 9:0.004697 15:0.004697 21:0.004697 27:0.004697 33:0.004697 39:0.004697 45:0.004697 51:0.004697 57:0.004697
+[*] pqc_client_4 <= plan: 4:0.004697 10:0.004697 16:0.004697 22:0.004697 28:0.004697 34:0.004697 40:0.004697 46:0.004697 52:0.004697 58:0.004697
+[*] pqc_client_5 <= plan: 5:0.004697 11:0.004697 17:0.004697 23:0.004697 29:0.004697 35:0.004697 41:0.004697 47:0.004697 53:0.004697 59:0.004697
+[*] pqc_client_6 <= plan: 6:0.004697 12:0.004697 18:0.004697 24:0.004697 30:0.004697 36:0.004697 42:0.004697 48:0.004697 54:0.004697 60:0.004697
+client=pqc_client total=10 ok=10 err=0
+client=pqc_client_2 total=10 ok=10 err=0
+client=pqc_client_3 total=10 ok=10 err=0
+client=pqc_client_4 total=10 ok=10 err=0
+client=pqc_client_5 total=10 ok=10 err=0
+client=pqc_client_6 total=10 ok=10 err=0
+[*] Resumen guardado en: results/hybrid_p0_balanced_c60_002_resource_summary.txt
+RUN_ID: hybrid_p0_balanced_c60_002
+CSV: results/hybrid_p0_balanced_c60_002_docker_stats.csv
+
+=== Resumen CPU% y MEM% (avg / max) por contenedor ===
+pqc_client_2 -> CPU avg=0.43%, CPU max=1.30%, MEM avg=0.09%, MEM max=0.09%
+pqc_client_3 -> CPU avg=0.88%, CPU max=2.63%, MEM avg=0.09%, MEM max=0.09%
+pqc_monitor -> CPU avg=0.07%, CPU max=0.15%, MEM avg=0.12%, MEM max=0.12%
+pqc_client_4 -> CPU avg=1.95%, CPU max=5.86%, MEM avg=0.08%, MEM max=0.08%
+pqc_client_5 -> CPU avg=1.94%, CPU max=5.81%, MEM avg=0.08%, MEM max=0.08%
+pqc_server -> CPU avg=2.96%, CPU max=8.87%, MEM avg=0.11%, MEM max=0.11%
+pqc_client_6 -> CPU avg=2.14%, CPU max=6.41%, MEM avg=0.13%, MEM max=0.13%
+pqc_client -> CPU avg=0.00%, CPU max=0.00%, MEM avg=0.12%, MEM max=0.12%
+[2026-05-16 23:49:00] [*] Parando captura en pqc_monitor para hybrid_p0_balanced_c60_002

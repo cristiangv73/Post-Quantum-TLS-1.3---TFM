@@ -1,0 +1,66 @@
+[2026-05-16 17:55:03] CLIENTS=pqc_client,pqc_client_2,pqc_client_3,pqc_client_4,pqc_client_5,pqc_client_6
+[2026-05-16 17:55:03] RUNS_PER_SCENARIO=5 TOTAL_CONN_VALUES=6 50 STATS_INTERVAL=0.2
+[2026-05-16 17:55:03] ==== Iniciando bloque TOTAL_CONN=6 ====
+[2026-05-16 17:55:03] ---- Aplicando perfil de red P0 ----
+[*] Aplicando perfil P0
+[*] Perfil P0 (sin degradación)
+
+[*] Estado qdisc en monitor:
+qdisc noqueue 0: root refcnt 2 
+qdisc noqueue 0: root refcnt 2 
+[2026-05-16 17:55:04] === RUN START: hybrid_p0_balanced_c6_001 ===
+[2026-05-16 17:55:04] [*] Arrancando captura en pqc_monitor (eth0) para hybrid_p0_balanced_c6_001
+[*] Guardando muestras en: results/hybrid_p0_balanced_c6_001_docker_stats.csv
+[*] Ejecutando comando medido: bash -lc ./scripts/run_client_once_rafaga_hibrido.sh hybrid_p0_balanced_c6_001 6; sleep 3
+[*] Ráfaga híbrida completada: 6 conexiones en 6 clientes (poisson_jitter)
+=== host results ===
+-rw-rw-r-- 1 cristian cristian    1350 may 16 17:55 hybrid_p0_balanced_c6_001_client_err.txt
+-rw-rw-r-- 1 cristian cristian     524 may 16 17:55 hybrid_p0_balanced_c6_001_client.txt
+-rw-rw-r-- 1 cristian cristian      69 may 16 17:55 hybrid_p0_balanced_c6_001_docker_stats.csv
+-rw-r--r-- 1 root     root         225 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_2_client_err.txt
+-rw-r--r-- 1 root     root        5913 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_2_client.txt
+-rw-r--r-- 1 root     root          39 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_2_summary.txt
+-rw-r--r-- 1 root     root         225 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_3_client_err.txt
+-rw-r--r-- 1 root     root        5913 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_3_client.txt
+-rw-r--r-- 1 root     root          39 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_3_summary.txt
+-rw-r--r-- 1 root     root         225 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_4_client_err.txt
+-rw-r--r-- 1 root     root        5913 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_4_client.txt
+-rw-r--r-- 1 root     root          39 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_4_summary.txt
+-rw-r--r-- 1 root     root         225 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_5_client_err.txt
+-rw-r--r-- 1 root     root        2587 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_5_client.txt
+-rw-r--r-- 1 root     root          39 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_5_summary.txt
+-rw-r--r-- 1 root     root         225 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_6_client_err.txt
+-rw-r--r-- 1 root     root        2587 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_6_client.txt
+-rw-r--r-- 1 root     root          39 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_6_summary.txt
+-rw-r--r-- 1 root     root         225 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_client_err.txt
+-rw-r--r-- 1 root     root        2587 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_client.txt
+-rw-r--r-- 1 root     root          37 may 16 17:55 hybrid_p0_balanced_c6_001_pqc_client_summary.txt
+=== resumen por cliente ===
+[*] Perfil poisson_jitter: llegadas no sincronizadas con Poisson+jitter
+[*] pqc_client <= plan: 1:0.000000
+[*] pqc_client_2 <= plan: 2:0.000000
+[*] pqc_client_3 <= plan: 3:0.000000
+[*] pqc_client_4 <= plan: 4:0.000000
+[*] pqc_client_5 <= plan: 5:0.000000
+[*] pqc_client_6 <= plan: 6:0.000000
+client=pqc_client total=1 ok=1 err=0
+client=pqc_client_2 total=1 ok=1 err=0
+client=pqc_client_3 total=1 ok=1 err=0
+client=pqc_client_4 total=1 ok=1 err=0
+client=pqc_client_5 total=1 ok=1 err=0
+client=pqc_client_6 total=1 ok=1 err=0
+[*] Resumen guardado en: results/hybrid_p0_balanced_c6_001_resource_summary.txt
+RUN_ID: hybrid_p0_balanced_c6_001
+CSV: results/hybrid_p0_balanced_c6_001_docker_stats.csv
+
+=== Resumen CPU% y MEM% (avg / max) por contenedor ===
+pqc_client_2 -> CPU avg=0.00%, CPU max=0.00%, MEM avg=0.01%, MEM max=0.01%
+pqc_client_3 -> CPU avg=0.00%, CPU max=0.00%, MEM avg=0.02%, MEM max=0.02%
+pqc_monitor -> CPU avg=0.13%, CPU max=0.18%, MEM avg=0.05%, MEM max=0.05%
+pqc_client_4 -> CPU avg=0.00%, CPU max=0.00%, MEM avg=0.01%, MEM max=0.01%
+pqc_client_5 -> CPU avg=0.00%, CPU max=0.00%, MEM avg=0.01%, MEM max=0.01%
+pqc_server -> CPU avg=0.00%, CPU max=0.00%, MEM avg=0.11%, MEM max=0.11%
+pqc_client_6 -> CPU avg=0.00%, CPU max=0.00%, MEM avg=0.06%, MEM max=0.06%
+pqc_client -> CPU avg=0.00%, CPU max=0.00%, MEM avg=0.04%, MEM max=0.04%
+[2026-05-16 17:55:17] [*] Parando captura en pqc_monitor para hybrid_p0_balanced_c6_001
+awk: cmd. line:1: fatal: division by zero attempted
