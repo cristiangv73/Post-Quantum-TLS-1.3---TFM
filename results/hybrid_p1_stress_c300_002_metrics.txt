@@ -1,0 +1,1394 @@
+=== INFO GENERAL ===
+RUN_ID: hybrid_p1_stress_c300_002
+Scenario: hybrid
+Group: X25519MLKEM768
+PCAP: pcaps/hybrid_p1_stress_c300_002.pcap
+Clients detected: pqc_client pqc_client_2 pqc_client_3 pqc_client_4 pqc_client_5 pqc_client_6
+Base filter: (ip.addr==172.20.0.10 || ip.addr==172.20.0.11 || ip.addr==172.20.0.12 || ip.addr==172.20.0.13 || ip.addr==172.20.0.14 || ip.addr==172.20.0.15) && ip.addr==192.168.0.10 && tcp.port==4433
+Primary tcp.stream for latency metrics: 1
+
+=== CAPINFOS ===
+File name:           pcaps/hybrid_p1_stress_c300_002.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+File timestamp precision:  nanoseconds (9)
+Packet size limit:   file hdr: (not set)
+Number of packets:   5.753
+File size:           2.266 kB
+Data size:           2.069 kB
+Capture duration:    13,703293509 seconds
+First packet time:   2026-05-18 13:57:02,079175031
+Last packet time:    2026-05-18 13:57:15,782468540
+Data byte rate:      151 kBps
+Data bit rate:       1.208 kbps
+Average packet size: 359,70 bytes
+Average packet rate: 419 packets/s
+SHA256:              312f5c96d04ef27e92b6365f89982e9a55524856324500e854267d9299151579
+RIPEMD160:           18b1f3c28b2e32324ae93f6180f6de15ca799be3
+SHA1:                cf8f0484350b3b1e58072d52161d32c3c375d4ad
+Strict time order:   True
+Capture hardware:    AMD Ryzen 7 7735HS with Radeon Graphics (with SSE4.2)
+Capture oper-sys:    Linux 5.15.0-177-generic
+Capture application: Dumpcap (Wireshark) 4.2.2 (Git v4.2.2 packaged as 4.2.2-1.1build3)
+Number of interfaces in file: 1
+Interface #0 info:
+                     Name = eth0
+                     Encapsulation = Ethernet (1 - ether)
+                     Capture length = 262144
+                     Time precision = nanoseconds (9)
+                     Time ticks per second = 1000000000
+                     Time resolution = 0x09
+                     Operating system = Linux 5.15.0-177-generic
+                     Number of stat entries = 1
+                     Number of packets = 5753
+
+=== TLS HANDSHAKES ===
+   32 0.259711182  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+   40 0.316827110  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+   44 0.316837670  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+   45 0.316839113  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+   47 0.316841798  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+   48 0.316843261  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+   49 0.316849593  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+   57 0.321209168 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+  100 0.575437449  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  133 0.615895000  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  143 0.633268749  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  148 0.633279259  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  155 0.635377711  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  157 0.642865960  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  158 0.642870128  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  190 0.674859246 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+  208 0.697730269  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  210 0.701195613  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  235 0.719436174 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+  249 0.751046215  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  260 0.833446594  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  262 0.851589489  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  267 0.875100055  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  296 0.956426107  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  299 0.960431669  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  300 0.960436158  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  307 0.963745265  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  309 0.967460034  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  326 1.007788173  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  341 1.048742383  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  343 1.054440075  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  345 1.056954770  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  366 1.084457784  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  367 1.084462082  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  370 1.090405042  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  373 1.090412195  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  381 1.092920949  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  389 1.099756025  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  403 1.115261730  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  405 1.120638561  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  409 1.123713863  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  413 1.124944886  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  415 1.127532289  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  418 1.135471306  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  422 1.137533550  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  427 1.140269205  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  430 1.143998251  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  433 1.146086134  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  438 1.162527158  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  441 1.164051768  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  442 1.164055305  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  450 1.169337326  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  455 1.175175374  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  459 1.178255687  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  464 1.182302708  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  468 1.187731037  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  478 1.193778956  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  482 1.196756172  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  483 1.196758075  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  500 1.206744446  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  508 1.215403004  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  510 1.217910225  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  527 1.228539619  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  530 1.233400009  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  535 1.236281342  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  537 1.236288154  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  545 1.239207899  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  550 1.243947534  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  551 1.243950830  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  553 1.243953896  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  557 1.246305896  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  560 1.248646470  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  563 1.249315984  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  565 1.251756026  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  572 1.257993225  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  584 1.268080200  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  585 1.268081523  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  590 1.270293020  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  594 1.271393795  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  603 1.279087656  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  614 1.287229779  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  615 1.287231162  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  628 1.292503863  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  631 1.293331053  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  635 1.294877025  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  638 1.295542085  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  643 1.297361648  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  646 1.298706004  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  649 1.300935433  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  653 1.302570144  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  671 1.311202236  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  672 1.311205342  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  675 1.312897522  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  677 1.315108068  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  678 1.315112236  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  680 1.315115994  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  692 1.319794170  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  693 1.319880324  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  695 1.319886817  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  702 1.321836511  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  703 1.321838996  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  707 1.323269834  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  708 1.323274523  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  715 1.326611903  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  719 1.329332149  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  726 1.330568792  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  727 1.330571958  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  728 1.330574192  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  732 1.332482699  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  733 1.332488430  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  736 1.332665587  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  741 1.336496887  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  750 1.338998277  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  755 1.341344617  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  758 1.341351710  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  768 1.347710746  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  775 1.354750381  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  777 1.356678144  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  782 1.360027377  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  785 1.360034400  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  794 1.361444950  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  795 1.364186516  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  796 1.364189422  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  810 1.367011611  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  812 1.368311755  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  819 1.375273514  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  820 1.375279515  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  823 1.379891330  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  827 1.382685938  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  829 1.383085739  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  831 1.384811783  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  833 1.384817554  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  843 1.388104038  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  844 1.388180864  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  851 1.389245109  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  853 1.392438886  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  854 1.392445038  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  859 1.394623313 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+  861 1.396614291  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  862 1.396617768  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  863 1.396619842  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  875 1.406685355  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  876 1.406693691  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  879 1.407590157  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  887 1.415788096  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  891 1.416805442  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  903 1.435263846  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  904 1.435271190  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  907 1.437612365  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  908 1.437617645  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  915 1.439700628  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  919 1.444490393  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  920 1.444499189  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  927 1.454627223  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  929 1.454767449  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  936 1.463158897  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  940 1.463585990  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  946 1.469577419  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  948 1.470078463  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  953 1.473278283  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  954 1.473282922  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  957 1.474157236  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  959 1.477641034  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  960 1.477644040  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  961 1.477645643  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  962 1.477647035  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  970 1.483128716  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  972 1.483726343  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  973 1.483730731  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  976 1.483968193  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  978 1.486835289  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  981 1.489276846  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  982 1.489281655  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  988 1.491854511 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+  996 1.496925379  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1003 1.501031733  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1004 1.501035460  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1007 1.503176724  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1008 1.503180411  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1009 1.503182024  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1013 1.504486276  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1015 1.506792435  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1020 1.513782777  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1025 1.514949758  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1027 1.515167332  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1029 1.517272107  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1032 1.517279411  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1037 1.517981778  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1043 1.519998405  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1047 1.524548012  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1053 1.527015688  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1054 1.527017381  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1057 1.528383821  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1071 1.533797333 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1075 1.538548548  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1077 1.539860364  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1086 1.550480568  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1088 1.555283507  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1106 1.575202711 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1116 1.587933556  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1117 1.587938586  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1122 1.594144124  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1123 1.594148993  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1126 1.596214003  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1130 1.605503709  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1149 1.613433718 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1151 1.613734821  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1159 1.623059303  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1166 1.631262572  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1167 1.631264626  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1182 1.641600843  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1186 1.646259928  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1209 1.655813862 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1217 1.659911269  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1227 1.662027395  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1240 1.672905899  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1245 1.676199256  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1249 1.677936852  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1253 1.680224976  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1267 1.687457318  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1270 1.689371520  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1273 1.689377642  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1278 1.690306960  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1280 1.691310549  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1284 1.693292170  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1301 1.704518761  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1313 1.706443354  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1316 1.707786449 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1318 1.709552560  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1319 1.709556287  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1321 1.709559613  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1326 1.713469423  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1328 1.713472178  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1329 1.713473510  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1330 1.713475124  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1337 1.715740378  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1338 1.715743605  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1339 1.715744767  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1351 1.719361993  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1353 1.719746817  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1356 1.722729382  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1357 1.722730815  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1369 1.731248016  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1370 1.731250601  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1373 1.732427811  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1376 1.733053196  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1379 1.735916023  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1381 1.735920211  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1389 1.741622131  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1407 1.747488223 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1409 1.747821386  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1410 1.747824953  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1418 1.749521662  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1422 1.751688324  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1439 1.764522805  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1443 1.767395171  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1449 1.769723551  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1453 1.771647252  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1461 1.775866470  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1467 1.776206086  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1469 1.778323214  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1474 1.779697369  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1476 1.779702038  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1480 1.781824256  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1489 1.782872420  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1498 1.785114927  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1502 1.785944526 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1504 1.787518651  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1505 1.787535904  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1508 1.788016348  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1514 1.791692122  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1517 1.793354265  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1522 1.804286106  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1523 1.804289332  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1525 1.804292598  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1528 1.804296335  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1531 1.804303769  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1532 1.804305252  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1540 1.806371794  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1542 1.806376934  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1543 1.806378878  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1547 1.807864254  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1549 1.807868562  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1552 1.809451124  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1554 1.809528591  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1556 1.810897385  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1568 1.821930591  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1571 1.825906717  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1572 1.825913700  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1576 1.826238407  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1583 1.827130631  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1591 1.830988889 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1595 1.837659307  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1605 1.846972214  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1618 1.864842691  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1623 1.864853692  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1627 1.864863731  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1640 1.868947161 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1641 1.868986216  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1649 1.882889733  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1657 1.895592366  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1676 1.909644086 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1678 1.910190776  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1679 1.910196998  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1686 1.914166136  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1689 1.915097118  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1692 1.917441880  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1694 1.918435180  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1704 1.931763508  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1706 1.934930866  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1712 1.944284610  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1724 1.951830494 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1729 1.957421104  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1730 1.957426955  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1731 1.957967093  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1735 1.961571310  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1748 1.992448408 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1762 2.029949870 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1776 2.071540757 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1790 2.109477659 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1804 2.150572833 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1818 2.188093911 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1832 2.225696517 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1846 2.266482278 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1858 2.304184420 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1872 2.342953091 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1886 2.383020509 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1900 2.421321876 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1914 2.459615878 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1928 2.501992439 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1942 2.541442609 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1956 2.582274807 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1970 2.625822633 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1983 2.664754855 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1997 2.704605764 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2011 2.745217765 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2025 2.784623799 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2039 2.823912449 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2053 2.863339022 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2067 2.901473697 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2081 2.942343918 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2095 2.984675049 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2109 3.023730010 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2123 3.064604203 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2137 3.105549757 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2152 3.147131502 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2166 3.187167235 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2180 3.223977661 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2194 3.260330861 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2208 3.296536081 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2222 3.335804984 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2236 3.375000198 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2250 3.415080751 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2264 3.453727625 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2278 3.490548621 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2292 3.526688981 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2306 3.563906351 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2320 3.601171493 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2334 3.639000324 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2348 3.677127867 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2362 3.715084073 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2376 3.752773060 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2390 3.791340548 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2404 3.828402112 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2418 3.866983796 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2432 3.904620336 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2446 3.942709414 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2460 3.982393247 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2474 4.020577538 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2488 4.060282431 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2502 4.097691426 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2516 4.135719648 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2530 4.172795198 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2544 4.208878727 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2558 4.247576875 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2572 4.284386903 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2586 4.322873560 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2600 4.360302684 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2614 4.398128562 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2627 4.437302155 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2641 4.476990902 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2655 4.514592529 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2669 4.554612622 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2683 4.591673833 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2697 4.628833123 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2711 4.666658892 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2725 4.702194212 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2739 4.739991185 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2753 4.779260334 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2767 4.816401615 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2781 4.857585703 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2795 4.896930176 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2809 4.935045395 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2823 4.973617668 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2837 5.012470390 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2851 5.049875558 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2865 5.087874134 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2879 5.126947582 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2893 5.164630033 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2907 5.204137219 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2921 5.242324426 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2935 5.280337089 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2949 5.319540939 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2963 5.358992952 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2977 5.397480390 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2991 5.436338422 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3005 5.473684868 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3019 5.513046438 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3033 5.554253430 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3047 5.596086444 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3061 5.637029013 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3075 5.679128283 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3089 5.719183383 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3103 5.756675175 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3117 5.795680613 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3131 5.834391551 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3145 5.874384338 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3159 5.914136050 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3173 5.951209813 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3187 5.992640195 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3201 6.032721920 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3215 6.070865615 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3229 6.110775819 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3243 6.147310942 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3257 6.184706750 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3271 6.224873059 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3286 6.262288271 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3300 6.302757460 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3314 6.341964231 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3328 6.381757959 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3342 6.423874282 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3356 6.471367055 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3370 6.514952935 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3384 6.553362493 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3398 6.595215766 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3411 6.638645408 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3426 6.678807031 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3440 6.718147030 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3454 6.757723470 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3468 6.796431356 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3482 6.835218694 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3496 6.875668355 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3510 6.915702756 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3524 6.958346583 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3537 6.999018427 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3552 7.040389763 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3566 7.082296577 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3580 7.125890743 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3594 7.166792915 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3608 7.204432379 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3622 7.243704590 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3636 7.282883804 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3650 7.325012360 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3664 7.364122202 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3678 7.404382573 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3692 7.444527695 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3706 7.484132960 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3720 7.522241707 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3734 7.561071757 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3748 7.599070660 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3762 7.636118754 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3776 7.678208146 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3790 7.717001696 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3804 7.753574770 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3818 7.791433701 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3832 7.828851555 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3846 7.868269653 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3860 7.910638106 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3874 7.948740391 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3888 7.986543516 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3902 8.025044901 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3916 8.063095176 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3930 8.101448117 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3944 8.140858483 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3958 8.182823088 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3972 8.220877051 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3986 8.259675472 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3999 8.298981627 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4014 8.337445074 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4028 8.377029855 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4042 8.414983548 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4056 8.453511713 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4070 8.496335902 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4085 8.534223173 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4099 8.572242195 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4113 8.608814239 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4126 8.648342176 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4141 8.685321204 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4155 8.722854185 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4169 8.762551635 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4183 8.802173063 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4197 8.841177114 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4211 8.882125114 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4225 8.921394298 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4239 8.960285226 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4253 8.999358829 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4267 9.039234874 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4281 9.078568969 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4295 9.118168513 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4309 9.157995158 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4323 9.197147591 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4337 9.234382327 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4351 9.276452604 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4365 9.315054169 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4379 9.353417691 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4394 9.393074625 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4408 9.433311646 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4422 9.472967714 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4436 9.510369785 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4450 9.553725644 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4464 9.591799840 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4478 9.634142961 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4492 9.672183001 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4506 9.712275275 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4521 9.752063298 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4535 9.794942905 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4549 9.832968153 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4563 9.902636316 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4577 9.944169349 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4592 9.987746112 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4606 10.026301360 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4620 10.068989121 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4634 10.117477858 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4650 10.284727566 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4673 10.490864713 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4691 10.529047544 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4705 10.572658503 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4719 10.614199649 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4733 10.656045495 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4747 10.697233142 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4761 10.737518124 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4775 10.776843098 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4789 10.818189038 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4803 10.858427139 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4817 10.898749611 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4831 10.937816684 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4845 10.977772949 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4859 11.017251956 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4873 11.058506001 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4887 11.096809319 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4901 11.137167507 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4915 11.174838601 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4929 11.213583932 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4943 11.296347256 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4957 11.334339824 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4971 11.374131362 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4985 11.411484146 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4999 11.450325131 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5013 11.490077036 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5027 11.529667784 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5041 11.566959288 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5055 11.604024985 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5069 11.640629135 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5083 11.677120456 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5097 11.717105735 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5111 11.756922392 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5125 11.796313765 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5139 11.832846841 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5153 11.874788492 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5167 11.913570531 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5181 11.953548677 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5195 11.993182738 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5209 12.031695965 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5223 12.069767763 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5237 12.108288584 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5251 12.146107942 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5265 12.183639602 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5279 12.220687132 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5293 12.259259743 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5307 12.296955466 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5321 12.335588922 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5335 12.376116554 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5349 12.418837659 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5363 12.456025445 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5377 12.495424117 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5391 12.578263069 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5407 12.621496243 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5421 12.658464396 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5435 12.696191733 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5449 12.733111073 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5463 12.772392127 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5477 12.810015532 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5491 12.849127399 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5505 12.888812157 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5519 12.928002783 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5533 12.967512889 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5547 13.006245042 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5561 13.044921102 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5575 13.083879587 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5589 13.122009206 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5603 13.160572670 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5617 13.205613529 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5631 13.245129275 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5645 13.282008223 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5659 13.324098478 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5673 13.366380287 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5689 13.520951213 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5710 13.559138450 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5724 13.597495101 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5738 13.635779596 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+
+=== CLIENT HELLO ===
+   32 0.259711182  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+   40 0.316827110  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+   44 0.316837670  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+   45 0.316839113  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+   47 0.316841798  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+   48 0.316843261  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+   49 0.316849593  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  100 0.575437449  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  133 0.615895000  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  143 0.633268749  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  148 0.633279259  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  155 0.635377711  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  157 0.642865960  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  158 0.642870128  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  208 0.697730269  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  210 0.701195613  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  249 0.751046215  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  260 0.833446594  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  262 0.851589489  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  267 0.875100055  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  296 0.956426107  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  299 0.960431669  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  300 0.960436158  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  307 0.963745265  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  309 0.967460034  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  326 1.007788173  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  341 1.048742383  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  343 1.054440075  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  345 1.056954770  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  366 1.084457784  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  367 1.084462082  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  370 1.090405042  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  373 1.090412195  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  381 1.092920949  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  389 1.099756025  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  403 1.115261730  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  405 1.120638561  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  409 1.123713863  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  413 1.124944886  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  415 1.127532289  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  418 1.135471306  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  422 1.137533550  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  427 1.140269205  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  430 1.143998251  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  433 1.146086134  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  438 1.162527158  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  441 1.164051768  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  442 1.164055305  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  450 1.169337326  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  455 1.175175374  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  459 1.178255687  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  464 1.182302708  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  468 1.187731037  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  478 1.193778956  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  482 1.196756172  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  483 1.196758075  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  500 1.206744446  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  508 1.215403004  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  510 1.217910225  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  527 1.228539619  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  530 1.233400009  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  535 1.236281342  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  537 1.236288154  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  545 1.239207899  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  550 1.243947534  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  551 1.243950830  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  553 1.243953896  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  557 1.246305896  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  560 1.248646470  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  563 1.249315984  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  565 1.251756026  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  572 1.257993225  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  584 1.268080200  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  585 1.268081523  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  590 1.270293020  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  594 1.271393795  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  603 1.279087656  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  614 1.287229779  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  615 1.287231162  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  628 1.292503863  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  631 1.293331053  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  635 1.294877025  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  638 1.295542085  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  643 1.297361648  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  646 1.298706004  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  649 1.300935433  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  653 1.302570144  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  671 1.311202236  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  672 1.311205342  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  675 1.312897522  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  677 1.315108068  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  678 1.315112236  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  680 1.315115994  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  692 1.319794170  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  693 1.319880324  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  695 1.319886817  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  702 1.321836511  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  703 1.321838996  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  707 1.323269834  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  708 1.323274523  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  715 1.326611903  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  719 1.329332149  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  726 1.330568792  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  727 1.330571958  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  728 1.330574192  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  732 1.332482699  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  733 1.332488430  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  736 1.332665587  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  741 1.336496887  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  750 1.338998277  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  755 1.341344617  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  758 1.341351710  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  768 1.347710746  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  775 1.354750381  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  777 1.356678144  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  782 1.360027377  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  785 1.360034400  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  794 1.361444950  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  795 1.364186516  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  796 1.364189422  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  810 1.367011611  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  812 1.368311755  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  819 1.375273514  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  820 1.375279515  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  823 1.379891330  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  827 1.382685938  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  829 1.383085739  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  831 1.384811783  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  833 1.384817554  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  843 1.388104038  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  844 1.388180864  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  851 1.389245109  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  853 1.392438886  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  854 1.392445038  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  861 1.396614291  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  862 1.396617768  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  863 1.396619842  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  875 1.406685355  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  876 1.406693691  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  879 1.407590157  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  887 1.415788096  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  891 1.416805442  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  903 1.435263846  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  904 1.435271190  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  907 1.437612365  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  908 1.437617645  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  915 1.439700628  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  919 1.444490393  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  920 1.444499189  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  927 1.454627223  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  929 1.454767449  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  936 1.463158897  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  940 1.463585990  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  946 1.469577419  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+  948 1.470078463  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  953 1.473278283  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  954 1.473282922  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  957 1.474157236  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+  959 1.477641034  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  960 1.477644040  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  961 1.477645643  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  962 1.477647035  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  970 1.483128716  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  972 1.483726343  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  973 1.483730731  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  976 1.483968193  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  978 1.486835289  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  981 1.489276846  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+  982 1.489281655  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+  996 1.496925379  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1003 1.501031733  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1004 1.501035460  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1007 1.503176724  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1008 1.503180411  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1009 1.503182024  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1013 1.504486276  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1015 1.506792435  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1020 1.513782777  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1025 1.514949758  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1027 1.515167332  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1029 1.517272107  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1032 1.517279411  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1037 1.517981778  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1043 1.519998405  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1047 1.524548012  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1053 1.527015688  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1054 1.527017381  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1057 1.528383821  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1075 1.538548548  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1077 1.539860364  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1086 1.550480568  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1088 1.555283507  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1116 1.587933556  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1117 1.587938586  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1122 1.594144124  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1123 1.594148993  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1126 1.596214003  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1130 1.605503709  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1151 1.613734821  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1159 1.623059303  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1166 1.631262572  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1167 1.631264626  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1182 1.641600843  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1186 1.646259928  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1217 1.659911269  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1227 1.662027395  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1240 1.672905899  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1245 1.676199256  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1249 1.677936852  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1253 1.680224976  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1267 1.687457318  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1270 1.689371520  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1273 1.689377642  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1278 1.690306960  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1280 1.691310549  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1284 1.693292170  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1301 1.704518761  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1313 1.706443354  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1318 1.709552560  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1319 1.709556287  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1321 1.709559613  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1326 1.713469423  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1328 1.713472178  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1329 1.713473510  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1330 1.713475124  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1337 1.715740378  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1338 1.715743605  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1339 1.715744767  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1351 1.719361993  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1353 1.719746817  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1356 1.722729382  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1357 1.722730815  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1369 1.731248016  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1370 1.731250601  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1373 1.732427811  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1376 1.733053196  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1379 1.735916023  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1381 1.735920211  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1389 1.741622131  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1409 1.747821386  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1410 1.747824953  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1418 1.749521662  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1422 1.751688324  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1439 1.764522805  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1443 1.767395171  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1449 1.769723551  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1453 1.771647252  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1461 1.775866470  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1467 1.776206086  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1469 1.778323214  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1474 1.779697369  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1476 1.779702038  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1480 1.781824256  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1489 1.782872420  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1498 1.785114927  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1504 1.787518651  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1505 1.787535904  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1508 1.788016348  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1514 1.791692122  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1517 1.793354265  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1522 1.804286106  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1523 1.804289332  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1525 1.804292598  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1528 1.804296335  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1531 1.804303769  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1532 1.804305252  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1540 1.806371794  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1542 1.806376934  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1543 1.806378878  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1547 1.807864254  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1549 1.807868562  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1552 1.809451124  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1554 1.809528591  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1556 1.810897385  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1568 1.821930591  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1571 1.825906717  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1572 1.825913700  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1576 1.826238407  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1583 1.827130631  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1595 1.837659307  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1605 1.846972214  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1618 1.864842691  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1623 1.864853692  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1627 1.864863731  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1641 1.868986216  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1649 1.882889733  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1657 1.895592366  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1678 1.910190776  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1679 1.910196998  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1686 1.914166136  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1689 1.915097118  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1692 1.917441880  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1694 1.918435180  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1704 1.931763508  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1706 1.934930866  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1712 1.944284610  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1729 1.957421104  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1730 1.957426955  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1731 1.957967093  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+ 1735 1.961571310  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+
+=== SERVER HELLO ===
+   57 0.321209168 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+  190 0.674859246 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+  235 0.719436174 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+  859 1.394623313 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+  988 1.491854511 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1071 1.533797333 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1106 1.575202711 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1149 1.613433718 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1209 1.655813862 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1316 1.707786449 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1407 1.747488223 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1502 1.785944526 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1591 1.830988889 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1640 1.868947161 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1676 1.909644086 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1724 1.951830494 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1748 1.992448408 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1762 2.029949870 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1776 2.071540757 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1790 2.109477659 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1804 2.150572833 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1818 2.188093911 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1832 2.225696517 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1846 2.266482278 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1858 2.304184420 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1872 2.342953091 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1886 2.383020509 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1900 2.421321876 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1914 2.459615878 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1928 2.501992439 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1942 2.541442609 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1956 2.582274807 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1970 2.625822633 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1983 2.664754855 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 1997 2.704605764 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2011 2.745217765 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2025 2.784623799 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2039 2.823912449 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2053 2.863339022 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2067 2.901473697 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2081 2.942343918 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2095 2.984675049 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2109 3.023730010 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2123 3.064604203 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2137 3.105549757 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2152 3.147131502 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2166 3.187167235 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2180 3.223977661 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2194 3.260330861 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2208 3.296536081 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2222 3.335804984 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2236 3.375000198 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2250 3.415080751 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2264 3.453727625 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2278 3.490548621 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2292 3.526688981 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2306 3.563906351 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2320 3.601171493 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2334 3.639000324 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2348 3.677127867 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2362 3.715084073 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2376 3.752773060 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2390 3.791340548 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2404 3.828402112 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2418 3.866983796 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2432 3.904620336 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2446 3.942709414 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2460 3.982393247 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2474 4.020577538 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2488 4.060282431 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2502 4.097691426 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2516 4.135719648 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2530 4.172795198 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2544 4.208878727 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2558 4.247576875 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2572 4.284386903 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2586 4.322873560 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2600 4.360302684 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2614 4.398128562 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2627 4.437302155 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2641 4.476990902 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2655 4.514592529 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2669 4.554612622 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2683 4.591673833 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2697 4.628833123 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2711 4.666658892 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2725 4.702194212 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2739 4.739991185 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2753 4.779260334 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2767 4.816401615 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2781 4.857585703 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2795 4.896930176 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2809 4.935045395 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2823 4.973617668 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2837 5.012470390 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2851 5.049875558 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2865 5.087874134 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2879 5.126947582 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2893 5.164630033 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2907 5.204137219 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2921 5.242324426 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2935 5.280337089 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2949 5.319540939 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2963 5.358992952 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2977 5.397480390 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 2991 5.436338422 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3005 5.473684868 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3019 5.513046438 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3033 5.554253430 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3047 5.596086444 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3061 5.637029013 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3075 5.679128283 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3089 5.719183383 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3103 5.756675175 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3117 5.795680613 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3131 5.834391551 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3145 5.874384338 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3159 5.914136050 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3173 5.951209813 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3187 5.992640195 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3201 6.032721920 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3215 6.070865615 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3229 6.110775819 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3243 6.147310942 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3257 6.184706750 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3271 6.224873059 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3286 6.262288271 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3300 6.302757460 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3314 6.341964231 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3328 6.381757959 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3342 6.423874282 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3356 6.471367055 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3370 6.514952935 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3384 6.553362493 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3398 6.595215766 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3411 6.638645408 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3426 6.678807031 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3440 6.718147030 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3454 6.757723470 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3468 6.796431356 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3482 6.835218694 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3496 6.875668355 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3510 6.915702756 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3524 6.958346583 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3537 6.999018427 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3552 7.040389763 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3566 7.082296577 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3580 7.125890743 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3594 7.166792915 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3608 7.204432379 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3622 7.243704590 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3636 7.282883804 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3650 7.325012360 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3664 7.364122202 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3678 7.404382573 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3692 7.444527695 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3706 7.484132960 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3720 7.522241707 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3734 7.561071757 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3748 7.599070660 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3762 7.636118754 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3776 7.678208146 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3790 7.717001696 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3804 7.753574770 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3818 7.791433701 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3832 7.828851555 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3846 7.868269653 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3860 7.910638106 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3874 7.948740391 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3888 7.986543516 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3902 8.025044901 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3916 8.063095176 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3930 8.101448117 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3944 8.140858483 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3958 8.182823088 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3972 8.220877051 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3986 8.259675472 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 3999 8.298981627 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4014 8.337445074 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4028 8.377029855 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4042 8.414983548 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4056 8.453511713 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4070 8.496335902 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4085 8.534223173 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4099 8.572242195 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4113 8.608814239 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4126 8.648342176 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4141 8.685321204 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4155 8.722854185 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4169 8.762551635 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4183 8.802173063 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4197 8.841177114 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4211 8.882125114 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4225 8.921394298 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4239 8.960285226 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4253 8.999358829 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4267 9.039234874 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4281 9.078568969 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4295 9.118168513 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4309 9.157995158 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4323 9.197147591 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4337 9.234382327 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4351 9.276452604 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4365 9.315054169 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4379 9.353417691 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4394 9.393074625 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4408 9.433311646 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4422 9.472967714 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4436 9.510369785 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4450 9.553725644 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4464 9.591799840 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4478 9.634142961 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4492 9.672183001 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4506 9.712275275 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4521 9.752063298 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4535 9.794942905 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4549 9.832968153 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4563 9.902636316 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4577 9.944169349 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4592 9.987746112 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4606 10.026301360 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4620 10.068989121 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4634 10.117477858 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4650 10.284727566 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4673 10.490864713 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4691 10.529047544 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4705 10.572658503 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4719 10.614199649 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4733 10.656045495 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4747 10.697233142 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4761 10.737518124 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4775 10.776843098 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4789 10.818189038 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4803 10.858427139 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4817 10.898749611 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4831 10.937816684 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4845 10.977772949 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4859 11.017251956 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4873 11.058506001 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4887 11.096809319 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4901 11.137167507 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4915 11.174838601 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4929 11.213583932 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4943 11.296347256 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4957 11.334339824 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4971 11.374131362 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4985 11.411484146 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 4999 11.450325131 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5013 11.490077036 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5027 11.529667784 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5041 11.566959288 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5055 11.604024985 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5069 11.640629135 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5083 11.677120456 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5097 11.717105735 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5111 11.756922392 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5125 11.796313765 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5139 11.832846841 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5153 11.874788492 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5167 11.913570531 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5181 11.953548677 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5195 11.993182738 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5209 12.031695965 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5223 12.069767763 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5237 12.108288584 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5251 12.146107942 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5265 12.183639602 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5279 12.220687132 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5293 12.259259743 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5307 12.296955466 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5321 12.335588922 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5335 12.376116554 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5349 12.418837659 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5363 12.456025445 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5377 12.495424117 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5391 12.578263069 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5407 12.621496243 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5421 12.658464396 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5435 12.696191733 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5449 12.733111073 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5463 12.772392127 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5477 12.810015532 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5491 12.849127399 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5505 12.888812157 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5519 12.928002783 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5533 12.967512889 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5547 13.006245042 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5561 13.044921102 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5575 13.083879587 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5589 13.122009206 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5603 13.160572670 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5617 13.205613529 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5631 13.245129275 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5645 13.282008223 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5659 13.324098478 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5673 13.366380287 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5689 13.520951213 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5710 13.559138450 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5724 13.597495101 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+ 5738 13.635779596 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+
+=== TCP CONTROL ===
+SYN: 300
+SYN-ACK: 300
+ACK-only: 2137
+FIN: 607
+RST: 3
+
+=== TCP ANOMALIAS ===
+Retransmissions: 11
+Fast Retransmissions: 0
+Spurious Retransmissions: 3
+Duplicate ACK: 15
+Out of order: 3
+Lost segments: 0
+
+=== TLS METRICAS ===
+TLS handshake messages total: 600
+TLS alerts: 0
+ClientHello count: 300
+ServerHello count: 300
+EncryptedExtensions count: 0
+Certificate count: 0
+CertificateVerify count: 0
+Finished count: 0
+
+=== VOLUMEN / SEGMENTACION ===
+Packets total: 5753
+Bytes total: 2069347
+ClientHello packets: 300
+ServerHello packets: 300
+ClientHello frame bytes: 434700
+ServerHello frame bytes: 888600
+ClientHello tcp payload bytes: 414900
+ServerHello tcp payload bytes: 868800
+Max TCP payload bytes: 2896
+Max IP packet bytes (ip.len): 2948
+Max Ethernet frame bytes (frame.len): 2962
+TCP MSS client advertised: 1460
+TCP MSS server advertised: 1460
+TCP MSS negotiated (approx): 1460
+MTU assumed bytes (L3): 1500
+Packets exceeding MTU assumed (ip.len > 1500): 300
+Packets exceeding MTU client->server (ip.len > 1500): 0
+Packets exceeding MTU server->client (ip.len > 1500): 50
+TCP segments exceeding negotiated MSS (tcp.len > MSS): 300
+IP packets exceeding negotiated MSS estimate (ip.len > MSS+40): 300
+TCP segments > MSS client->server: 0
+TCP segments > MSS server->client: 50
+MSS unique values in SYN (client): 1460
+MSS unique values in SYN-ACK (server): 1460
+IP fragmented packets count: 0
+TCP near-MSS window [1400,1460] count: 0
+ClientHello streams: 300
+ClientHello packets per stream avg: 1.000
+ServerHello streams: 300
+ServerHello packets per stream avg: 1.000
+TCP ACK RTT avg (ms, tshark tcp.analysis.ack_rtt): 15.395
+TCP ACK RTT max (ms, tshark tcp.analysis.ack_rtt): 197.269
+TCP ACK RTT p50 (ms): 0.684
+TCP ACK RTT p95 (ms): 34.130
+TCP ACK RTT p99 (ms): 46.743
+Lat TCP SYN -> SYN-ACK (ms): 0.041
+Lat TCP SYN-ACK -> ACK (ms): 48.516
+Lat TLS ClientHello -> ServerHello (ms, primary stream): 415.148
+Lat TLS ClientHello -> ServerHello avg (ms, all streams): 5877.976
+Lat TLS ClientHello -> ServerHello p50 (ms): 5766.188
+Lat TLS ClientHello -> ServerHello p95 (ms): 11064.213
+Lat TLS ClientHello -> ServerHello p99 (ms): 11563.906
+Lat TLS ClientHello -> ServerHello samples (N): 300
+Lat TLS ServerHello -> Finished (ms): 
+Lat TLS Finished -> AppData (ms): 
+
+=== TIEMPO APROX HANDSHAKE DESDE PCAP ===
+Handshake start epoch: 1779105422.338886213
+Handshake end epoch: 
+Handshake duration ms (approx, primary stream): 
+Handshake duration avg ms (approx, sampled streams): 2833.147
+Handshake duration p50 ms (approx): 2626.009
+Handshake duration p95 ms (approx): 5852.761
+Handshake duration p99 ms (approx): 5901.832
+Handshake duration samples (N): 34
+Handshake duration sample threshold: 30
+Handshake duration percentile quality: ok
+Handshake fallback max gap ms for percentiles: 6000
+Handshake streams with CH: 300
+Handshake streams complete (CH+SH+fin heurístico): 34
+Handshake success rate (%): 11.333
+Handshake throughput global (hs/s): 4.250000
+Handshake throughput p50 (hs/s, ventana 1s): 4.000
+Handshake throughput p95 (hs/s, ventana 1s): 6.650
+Handshake throughput p99 (hs/s, ventana 1s): 6.930
+Handshake throughput peak (hs/s): 7.000
+Handshake throughput ventanas usadas: 8
+Crypto cost ratio (ServerHello_tcp_bytes / ClientHello_tcp_bytes): 2.093999
+TLS hello bytes por conexión (tcp payload): 4279.000
+TLS hello bytes por conexión p50 (tcp payload): 4279.000
+Red-vs-CPU ratio cliente (handshake_ms_avg / cpu_avg): 159.524043
+Red-vs-CPU ratio servidor (handshake_ms_avg / cpu_avg): 715.441162
+
+=== RECURSOS CPU/MEM (docker stats) ===
+Resource summary file: results/hybrid_p1_stress_c300_002_resource_summary.txt (present: yes)
+Resource raw csv file: results/hybrid_p1_stress_c300_002_docker_stats.csv (present: yes)
+pqc_clients CPU avg (%): 17.76
+pqc_clients CPU max (%): 103.30
+pqc_clients MEM avg (%): 2.94
+pqc_clients MEM max (%): 3.82
+pqc_server CPU avg (%): 3.96
+pqc_server CPU max (%): 8.00
+pqc_server MEM avg (%): 0.11
+pqc_server MEM max (%): 0.11
+pqc_monitor CPU avg (%): 0.17
+pqc_monitor CPU max (%): 0.32
+pqc_monitor MEM avg (%): 0.42
+pqc_monitor MEM max (%): 0.42
+
+--- raw resource summary ---
+RUN_ID: hybrid_p1_stress_c300_002
+CSV: results/hybrid_p1_stress_c300_002_docker_stats.csv
+
+=== Resumen CPU% y MEM% (avg / max) por contenedor ===
+pqc_client_2 -> CPU avg=18.28%, CPU max=103.30%, MEM avg=2.89%, MEM max=3.69%
+pqc_client_3 -> CPU avg=16.17%, CPU max=86.15%, MEM avg=2.89%, MEM max=3.66%
+pqc_monitor -> CPU avg=0.17%, CPU max=0.32%, MEM avg=0.42%, MEM max=0.42%
+pqc_client_4 -> CPU avg=18.81%, CPU max=102.60%, MEM avg=2.85%, MEM max=3.74%
+pqc_client_5 -> CPU avg=16.74%, CPU max=75.53%, MEM avg=3.02%, MEM max=3.73%
+pqc_server -> CPU avg=3.96%, CPU max=8.00%, MEM avg=0.11%, MEM max=0.11%
+pqc_client_6 -> CPU avg=12.41%, CPU max=61.99%, MEM avg=3.10%, MEM max=3.82%
+pqc_client -> CPU avg=24.16%, CPU max=91.75%, MEM avg=2.90%, MEM max=3.70%
+
+=== IO STAT ===
+
+===================================
+| IO Statistics                   |
+|                                 |
+| Duration: 13.7 secs             |
+| Interval: 13.7 secs             |
+|                                 |
+| Col 1: Frames and bytes         |
+|---------------------------------|
+|              |1                 |
+| Interval     | Frames |  Bytes  |
+|---------------------------------|
+|  0.0 <> 13.7 |   5753 | 2069347 |
+===================================
