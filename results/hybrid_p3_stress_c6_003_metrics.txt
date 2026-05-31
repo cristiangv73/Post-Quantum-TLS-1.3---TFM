@@ -1,0 +1,218 @@
+=== INFO GENERAL ===
+RUN_ID: hybrid_p3_stress_c6_003
+Scenario: hybrid
+Group: X25519MLKEM768
+PCAP: pcaps/hybrid_p3_stress_c6_003.pcap
+Clients detected: pqc_client pqc_client_2 pqc_client_3 pqc_client_4 pqc_client_5 pqc_client_6
+Base filter: (ip.addr==172.20.0.10 || ip.addr==172.20.0.11 || ip.addr==172.20.0.12 || ip.addr==172.20.0.13 || ip.addr==172.20.0.14 || ip.addr==172.20.0.15) && ip.addr==192.168.0.10 && tcp.port==4433
+Primary tcp.stream for latency metrics: 0
+
+=== CAPINFOS ===
+File name:           pcaps/hybrid_p3_stress_c6_003.pcap
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+File timestamp precision:  nanoseconds (9)
+Packet size limit:   file hdr: (not set)
+Number of packets:   117
+File size:           46 kB
+Data size:           42 kB
+Capture duration:    1,837039590 seconds
+First packet time:   2026-05-16 18:47:18,273157929
+Last packet time:    2026-05-16 18:47:20,110197519
+Data byte rate:      22 kBps
+Data bit rate:       183 kbps
+Average packet size: 360,17 bytes
+Average packet rate: 63 packets/s
+SHA256:              c0512c932126627f929da8bfd33f53f03814ed84d9af97db34ded7db12192153
+RIPEMD160:           f99e1f8c9f507e10eed10c4f4a9bdf8bd646b0f8
+SHA1:                180fb043f04693ef48cb6a8efa41056c3d2f65ae
+Strict time order:   True
+Capture hardware:    AMD Ryzen 7 7735HS with Radeon Graphics (with SSE4.2)
+Capture oper-sys:    Linux 5.15.0-177-generic
+Capture application: Dumpcap (Wireshark) 4.2.2 (Git v4.2.2 packaged as 4.2.2-1.1build3)
+Number of interfaces in file: 1
+Interface #0 info:
+                     Name = eth0
+                     Encapsulation = Ethernet (1 - ether)
+                     Capture length = 262144
+                     Time precision = nanoseconds (9)
+                     Time ticks per second = 1000000000
+                     Time resolution = 0x09
+                     Operating system = Linux 5.15.0-177-generic
+                     Number of stat entries = 1
+                     Number of packets = 117
+
+=== TLS HANDSHAKES ===
+    8 0.103872483  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+   10 0.106378046 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+   19 0.211685016  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+   30 0.215515303 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+   35 0.285010593  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+   36 0.285012657  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+   37 0.285014650  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+   52 0.956162770 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+   67 1.193005398  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+   73 1.261381231 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+   87 1.369837363 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+  103 1.625205463 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+
+=== CLIENT HELLO ===
+    8 0.103872483  172.20.0.10 → 192.168.0.10 TLSv1 1449 Client Hello
+   19 0.211685016  172.20.0.12 → 192.168.0.10 TLSv1 1449 Client Hello
+   35 0.285010593  172.20.0.14 → 192.168.0.10 TLSv1 1449 Client Hello
+   36 0.285012657  172.20.0.13 → 192.168.0.10 TLSv1 1449 Client Hello
+   37 0.285014650  172.20.0.15 → 192.168.0.10 TLSv1 1449 Client Hello
+   67 1.193005398  172.20.0.11 → 192.168.0.10 TLSv1 1449 Client Hello
+
+=== SERVER HELLO ===
+   10 0.106378046 192.168.0.10 → 172.20.0.10  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+   30 0.215515303 192.168.0.10 → 172.20.0.12  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+   52 0.956162770 192.168.0.10 → 172.20.0.13  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+   73 1.261381231 192.168.0.10 → 172.20.0.15  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+   87 1.369837363 192.168.0.10 → 172.20.0.14  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+  103 1.625205463 192.168.0.10 → 172.20.0.11  TLSv1.3 2962 Server Hello, Change Cipher Spec, Application Data
+
+=== TCP CONTROL ===
+SYN: 7
+SYN-ACK: 7
+ACK-only: 42
+FIN: 12
+RST: 0
+
+=== TCP ANOMALIAS ===
+Retransmissions: 5
+Fast Retransmissions: 0
+Spurious Retransmissions: 0
+Duplicate ACK: 2
+Out of order: 0
+Lost segments: 2
+
+=== TLS METRICAS ===
+TLS handshake messages total: 12
+TLS alerts: 0
+ClientHello count: 6
+ServerHello count: 6
+EncryptedExtensions count: 0
+Certificate count: 0
+CertificateVerify count: 0
+Finished count: 0
+
+=== VOLUMEN / SEGMENTACION ===
+Packets total: 117
+Bytes total: 42140
+ClientHello packets: 6
+ServerHello packets: 6
+ClientHello frame bytes: 8694
+ServerHello frame bytes: 17772
+ClientHello tcp payload bytes: 8298
+ServerHello tcp payload bytes: 17376
+Max TCP payload bytes: 2896
+Max IP packet bytes (ip.len): 2948
+Max Ethernet frame bytes (frame.len): 2962
+TCP MSS client advertised: 1460
+TCP MSS server advertised: 1460
+TCP MSS negotiated (approx): 1460
+MTU assumed bytes (L3): 1500
+Packets exceeding MTU assumed (ip.len > 1500): 6
+Packets exceeding MTU client->server (ip.len > 1500): 0
+Packets exceeding MTU server->client (ip.len > 1500): 1
+TCP segments exceeding negotiated MSS (tcp.len > MSS): 6
+IP packets exceeding negotiated MSS estimate (ip.len > MSS+40): 6
+TCP segments > MSS client->server: 0
+TCP segments > MSS server->client: 1
+MSS unique values in SYN (client): 1460
+MSS unique values in SYN-ACK (server): 1460
+IP fragmented packets count: 0
+TCP near-MSS window [1400,1460] count: 0
+ClientHello streams: 6
+ClientHello packets per stream avg: 1.000
+ServerHello streams: 6
+ServerHello packets per stream avg: 1.000
+TCP ACK RTT avg (ms, tshark tcp.analysis.ack_rtt): 76.021
+TCP ACK RTT max (ms, tshark tcp.analysis.ack_rtt): 738.185
+TCP ACK RTT p50 (ms): 101.082
+TCP ACK RTT p95 (ms): 145.138
+TCP ACK RTT p99 (ms): 463.581
+Lat TCP SYN -> SYN-ACK (ms): 0.201
+Lat TCP SYN-ACK -> ACK (ms): 100.700
+Lat TLS ClientHello -> ServerHello (ms, primary stream): 2.506
+Lat TLS ClientHello -> ServerHello avg (ms, all streams): 528.480
+Lat TLS ClientHello -> ServerHello p50 (ms): 551.675
+Lat TLS ClientHello -> ServerHello p95 (ms): 1057.712
+Lat TLS ClientHello -> ServerHello p99 (ms): 1079.404
+Lat TLS ClientHello -> ServerHello samples (N): 6
+Lat TLS ServerHello -> Finished (ms): 
+Lat TLS Finished -> AppData (ms): 
+
+=== TIEMPO APROX HANDSHAKE DESDE PCAP ===
+Handshake start epoch: 1778950038.377030412
+Handshake end epoch: 1778950038.485382540
+Handshake duration ms (approx, primary stream): 108.352
+Handshake duration avg ms (approx, sampled streams): 108.352
+Handshake duration p50 ms (approx): 108.352
+Handshake duration p95 ms (approx): 108.352
+Handshake duration p99 ms (approx): 108.352
+Handshake duration samples (N): 1
+Handshake duration sample threshold: 30
+Handshake duration percentile quality: insufficient_samples
+Handshake fallback max gap ms for percentiles: 6000
+Handshake streams with CH: 6
+Handshake streams complete (CH+SH+fin heurístico): 1
+Handshake success rate (%): 16.667
+Handshake throughput global (hs/s): 1.000000
+Handshake throughput p50 (hs/s, ventana 1s): 1.000
+Handshake throughput p95 (hs/s, ventana 1s): 1.000
+Handshake throughput p99 (hs/s, ventana 1s): 1.000
+Handshake throughput peak (hs/s): 1.000
+Handshake throughput ventanas usadas: 1
+Crypto cost ratio (ServerHello_tcp_bytes / ClientHello_tcp_bytes): 2.093999
+TLS hello bytes por conexión (tcp payload): 4279.000
+TLS hello bytes por conexión p50 (tcp payload): 4279.000
+Red-vs-CPU ratio cliente (handshake_ms_avg / cpu_avg): 246.254545
+Red-vs-CPU ratio servidor (handshake_ms_avg / cpu_avg): 492.509091
+
+=== RECURSOS CPU/MEM (docker stats) ===
+Resource summary file: results/hybrid_p3_stress_c6_003_resource_summary.txt (present: yes)
+Resource raw csv file: results/hybrid_p3_stress_c6_003_docker_stats.csv (present: yes)
+pqc_clients CPU avg (%): 0.44
+pqc_clients CPU max (%): 1.94
+pqc_clients MEM avg (%): 0.04
+pqc_clients MEM max (%): 0.08
+pqc_server CPU avg (%): 0.22
+pqc_server CPU max (%): 0.65
+pqc_server MEM avg (%): 0.11
+pqc_server MEM max (%): 0.11
+pqc_monitor CPU avg (%): 0.10
+pqc_monitor CPU max (%): 0.13
+pqc_monitor MEM avg (%): 0.10
+pqc_monitor MEM max (%): 0.10
+
+--- raw resource summary ---
+RUN_ID: hybrid_p3_stress_c6_003
+CSV: results/hybrid_p3_stress_c6_003_docker_stats.csv
+
+=== Resumen CPU% y MEM% (avg / max) por contenedor ===
+pqc_client_2 -> CPU avg=0.28%, CPU max=0.85%, MEM avg=0.03%, MEM max=0.05%
+pqc_client_3 -> CPU avg=0.58%, CPU max=1.75%, MEM avg=0.03%, MEM max=0.03%
+pqc_monitor -> CPU avg=0.10%, CPU max=0.13%, MEM avg=0.10%, MEM max=0.10%
+pqc_client_4 -> CPU avg=0.57%, CPU max=1.71%, MEM avg=0.02%, MEM max=0.02%
+pqc_client_5 -> CPU avg=0.65%, CPU max=1.94%, MEM avg=0.02%, MEM max=0.02%
+pqc_server -> CPU avg=0.22%, CPU max=0.65%, MEM avg=0.11%, MEM max=0.11%
+pqc_client_6 -> CPU avg=0.53%, CPU max=1.58%, MEM avg=0.08%, MEM max=0.08%
+pqc_client -> CPU avg=0.00%, CPU max=0.00%, MEM avg=0.05%, MEM max=0.05%
+
+=== IO STAT ===
+
+===================================
+| IO Statistics                   |
+|                                 |
+| Duration: 1.837 secs            |
+| Interval: 1.837 secs            |
+|                                 |
+| Col 1: Frames and bytes         |
+|---------------------------------|
+|                |1               |
+| Interval       | Frames | Bytes |
+|---------------------------------|
+| 0.000 <> 1.837 |    117 | 42140 |
+===================================
