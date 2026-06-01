@@ -130,7 +130,8 @@ Las métricas analizadas permiten estudiar el impacto del modo híbrido desde un
 
 Se adjunta Pipeline del laboratorio:
 
-<img width="1536" height="1024" alt="ChatGPT - Pipeline_v3" src="https://github.com/user-attachments/assets/0deaa513-726d-4b47-9263-80be4baf4857" />
+<img width="1536" height="1024" alt="Pipeline_v3" src="https://github.com/user-attachments/assets/17aa241e-9971-479c-8dc2-fad3d165cba3" />
+
 
 
 ## Alcance
