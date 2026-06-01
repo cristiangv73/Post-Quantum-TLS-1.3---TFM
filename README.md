@@ -128,7 +128,7 @@ Los resultados se presentan desglosados en tres dimensiones:
 
 De tal forma, que la nomenclatura de cada ejecución sigue el siquiente patron:
 
-**[modelo]__[perfil_de_Red]__[perfil_carga]__[num_conexiones]__[num_repeticion].csv**
+**`[modelo]_[perfil_de_Red]_[perfil_carga]_[num_conexiones]_[num_repeticion].csv`**
 
 Ejemplos: classic_p0_balanced_c50_003, hybrid_p2_aggressive_c1002_005...
 
