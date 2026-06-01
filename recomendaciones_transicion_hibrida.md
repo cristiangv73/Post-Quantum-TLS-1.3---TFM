@@ -1,4 +1,4 @@
-# Anexo 3: Recomendaciones prácticas de implementación y transición híbrida
+# Guía: Recomendaciones prácticas de implementación y transición híbrida
 
 A partir de los resultados obtenidos en este Trabajo Fin de Máster, se pueden extraer recomendaciones prácticas para una futura transición hacia TLS 1.3 híbrido con criptografía post-cuántica en infraestructuras corporativas reales. Estas recomendaciones se basan en los principales efectos observados durante la campaña experimental: aumento del tamaño del `ClientHello`, incremento del volumen total transmitido, sensibilidad a RTT y pérdida, variación de throughput, consumo de CPU y posible interacción con dispositivos intermedios.
 
