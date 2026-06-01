@@ -132,6 +132,8 @@ De tal forma, que la nomenclatura de cada ejecución sigue el siquiente patron:
 
 Ejemplos: classic_p0_balanced_c50_003, hybrid_p2_aggressive_c1002_005...
 
+Por cada ejecución se genera un fichero CSV y un fichero TXT, este ficho TXT es la versión en texto de las metricas CSV. Por no saturar el repositorio, se decide solo subir los ficheros CSV.
+
 Las métricas analizadas permiten estudiar el impacto del modo híbrido desde una perspectiva multicapa: volumen transmitido, paquetización, latencia TLS, throughput, consumo de CPU y comportamiento TCP.
 
 Se adjunta Pipeline del laboratorio:
