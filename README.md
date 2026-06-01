@@ -126,6 +126,12 @@ Los resultados se presentan desglosados en tres dimensiones:
 - **Perfil de carga:** `soft`, `balanced`, `aggressive`, `stress`.
 - **Número de conexiones:** `6`, `50`, `300`, `1002`.
 
+De tal forma, que la nomenclatura de cada ejecución sigue el siquiente patron:
+
+**[modelo]_[perfil_de_Red]_[perfil_carga]_[num_conexiones]_[num_repeticion].csv**
+
+Ejemplos: classic_p0_balanced_c50_003, hybrid_p2_aggressive_c1002_005...
+
 Las métricas analizadas permiten estudiar el impacto del modo híbrido desde una perspectiva multicapa: volumen transmitido, paquetización, latencia TLS, throughput, consumo de CPU y comportamiento TCP.
 
 Se adjunta Pipeline del laboratorio:
