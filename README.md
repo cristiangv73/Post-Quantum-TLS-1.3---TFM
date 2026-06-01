@@ -118,7 +118,7 @@ La campaña combina cuatro perfiles de red, cuatro perfiles de carga, cuatro vol
 
 - **2 escenarios × 4 perfiles de red × 4 perfiles de carga × 4 volúmenes × 5 repeticiones = 640 ejecuciones**.
 
-En cada una de estas 640 ejecuciones, se miden **103 métricas por ejecución**, dando un total de **65.920 datos** a analizar.
+En cada una de estas 640 ejecuciones, se miden **98 métricas por ejecución**, dando un total de **62.720 datos** a analizar.
 
 Los resultados se presentan desglosados en tres dimensiones:
 
