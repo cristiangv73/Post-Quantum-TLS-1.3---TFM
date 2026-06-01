@@ -146,19 +146,3 @@ Este documento describe el funcionamiento de **todos los scripts `.sh`** del pro
 ### `scripts/client_utils.sh`
 - Biblioteca de funciones comunes para scripts de cliente.
 - Reduce duplicación de lógica operativa (selección/detección/soporte de ejecución).
-
----
-
-## 7) Artefactos no operativos encontrados en `scripts/`
-
-Se detectan dos archivos que no forman parte del flujo de automatización (`ssh-keygen -t ed25519 -C "..."` y su `.pub`). Se recomienda moverlos fuera de `scripts/` o documentarlos explícitamente como artefactos de claves.
-
----
-
-## Recomendación final para publicación
-
-Para documentación pública y uso por terceros:
-
-1. Mantener `workflow.md` alineado con `extract_metrics3.sh` como extractor oficial.
-2. Etiquetar `extract_metrics.sh` y `extract_metrics2.sh` como heredados/compatibilidad.
-3. Mantener este inventario actualizado al añadir nuevos scripts.
