@@ -1,0 +1,5 @@
+Clave privada
+
+Get-ChildItem Cert:\LocalMachine\My |
+Where-Object {$_.Subject -like "*P7188*"} |
+Select-Object Subject, Thumbprint, HasPrivateKey, NotAfter
